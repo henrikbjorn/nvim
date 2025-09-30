@@ -1,2 +1,2 @@
-# nvim
-The greatest NeoVim configuration in the world
+Greatest NeoVim Config in The World
+===================================
