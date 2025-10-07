@@ -12,6 +12,11 @@ return {
         sources = {
           files = { hidden = true },
         },
+        formatters = {
+          file = {
+            filename_first = false,
+          }
+        }
       },
       rename = {
       },

@@ -67,7 +67,7 @@ return {
       },
 
       sources = {
-        default = { 'lsp', 'buffer' },
+        default = { 'lsp', 'buffer', 'path' },
       },
     },
   },
