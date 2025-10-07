@@ -46,9 +46,9 @@ vim.diagnostic.config({
 
 -- Expand %% in commands into the current directory, relative to
 -- where it was opened.
--- vim.cmd("cnoremap %% <C-R>=expand('%:h').'/'<cr>")
+-- https://www.reddit.com/r/neovim/comments/q2s3t1/comment/hfngk9b/
 vim.keymap.set('c', '%%', function()
-  local current_file_dir = vim.fn.expand('%:h')
+  local current_file_dir = vim.fn.expand('%:p:~:.:h')
   if current_file_dir ~= '' and current_file_dir ~= '.' then
     return current_file_dir .. '/'
   end
