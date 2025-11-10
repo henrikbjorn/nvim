@@ -32,7 +32,6 @@ vim.b.editorconfig = true
 -- Show the EOL character, so it is easier to spot trailing whitespace.
 vim.opt.listchars:append("eol:↴")
 
--- vim.cmd.colorscheme("gruvbox")
 vim.cmd.colorscheme("gruvbox")
 
 -- Diagnostics

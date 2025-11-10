@@ -65,6 +65,11 @@ return {
     },
   },
   {
+    'nvim-mini/mini.surround',
+    lazy = true,
+    opts = {},
+  },
+  {
     'nvim-mini/mini.icons',
     lazy = true,
     opts = {},
