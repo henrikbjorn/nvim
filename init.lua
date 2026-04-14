@@ -15,6 +15,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+
 require('lazy').setup('plugins', {
   performance = {
     cache = { 
@@ -37,3 +38,12 @@ require('lazy').setup('plugins', {
 
 require('settings')
 require('keymaps')
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { '<filetype>' },
+  callback = function()
+    vim.treesitter.start()
+
+    require('nvim-treesitter').indentexpr()
+  end,
+})

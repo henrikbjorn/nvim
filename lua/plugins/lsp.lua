@@ -12,8 +12,5 @@ return {
     opts = {
       automatic_enable = true
     },
-    init = function ()
-      vim.lsp.enable('flow')
-    end,
   },
 }
