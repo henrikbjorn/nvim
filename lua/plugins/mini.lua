@@ -59,12 +59,6 @@ return {
     opts = {},
   },
   {
-    'nvim-mini/mini.comment',
-    lazy = true,
-    opts = {
-    },
-  },
-  {
     'nvim-mini/mini.surround',
     lazy = true,
     opts = {},

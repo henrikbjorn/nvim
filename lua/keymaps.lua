@@ -19,6 +19,6 @@ vim.api.nvim_set_keymap('i', '<right>', '<nop>', {})
 
 -- Diagnostics
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev({ border = "single" })<CR>')
-vim.keymap.set('n', ']d',  '<cmd>lua vim.diagnostic.goto_next({ border = "single" })<CR>')
+vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1, float = true }) end)
+vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1, float = true }) end)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)

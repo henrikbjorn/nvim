@@ -2,7 +2,7 @@ vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
   vim.fn.system({
     "git",
     "clone",
@@ -38,12 +38,3 @@ require('lazy').setup('plugins', {
 
 require('settings')
 require('keymaps')
-
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = { '<filetype>' },
-  callback = function()
-    vim.treesitter.start()
-
-    require('nvim-treesitter').indentexpr()
-  end,
-})
