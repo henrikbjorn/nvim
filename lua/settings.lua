@@ -7,8 +7,6 @@ vim.o.showmode = false
 
 vim.o.list = true
 
-vim.o.termguicolors = true
-
 vim.wo.colorcolumn = "120"
 vim.wo.signcolumn = "yes:1"
 
@@ -24,10 +22,6 @@ vim.o.wildmode = "list:longest,full"
 vim.o.errorbells = false
 vim.o.number = true
 vim.o.wrap = false
-
--- EditorConfig
-vim.g.editorconfig = true
-vim.b.editorconfig = true
 
 -- Show the EOL character, so it is easier to spot trailing whitespace.
 vim.opt.listchars:append("eol:↴")
